@@ -2,6 +2,9 @@ import React from "react";
 import Switcher from './Switcher';
 
 function App() {
+  useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
   return (
     <div>
       <div style={{ textAlign: "center" }}>
@@ -11,7 +14,7 @@ function App() {
         </h3>
       </div>
       <center>
-        <Switcher />
+        <Switcher setTheme={setTheme} />
         <div className="w-56 overflow-hidden bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
           <img
             className="rounded-t-lg"
