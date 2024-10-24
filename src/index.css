@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light mode styles */
+body {
+  @apply bg-white text-black;
+  /* Default light mode styles */
+}
+
+/* Dark mode styles using Tailwind's class system */
+body.dark {
+  @apply bg-gray-800 text-white;
+  /* Dark mode styles */
+}
+
+/* You may also want to apply the same to other components */
