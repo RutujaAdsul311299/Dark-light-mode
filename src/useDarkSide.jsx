@@ -1,16 +1,14 @@
 import { useState, useEffect } from "react";
 
 export default function useDarkSide() {
-    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light"); // Default to light mode
-    const colorTheme = theme === "dark" ? "light" : "dark";
+    const [theme, setTheme] = useState(localStorage.theme || "light");
+    const colorTheme = theme === "light" ? "dark" : "light";
 
     useEffect(() => {
         const root = window.document.documentElement;
         root.classList.remove(colorTheme);
         root.classList.add(theme);
-
-        // Save the theme to localStorage
-        localStorage.setItem("theme", theme);
+        localStorage.theme = theme;
     }, [theme, colorTheme]);
 
     return [colorTheme, setTheme];

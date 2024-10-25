@@ -14,7 +14,7 @@ function App() {
         </h3>
       </div>
       <center>
-        <Switcher setTheme={setTheme} />
+        <Switcher />
         <div className="w-56 overflow-hidden bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
           <img
             className="rounded-t-lg"
